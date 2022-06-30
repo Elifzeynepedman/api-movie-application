@@ -10,8 +10,9 @@ function Header() {
         <div className="header__links">
           <Link to='/'>Home</Link>
           <Link to='/Genre'>Genre</Link>
+          <Link to='/Trending'>Trending</Link>
 
-          <MdMovieFilter size={80}/>
+          <MdMovieFilter size={80} id="md_icon"/>
       </div>
      
 </div>

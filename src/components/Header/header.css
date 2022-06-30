@@ -15,49 +15,61 @@
     margin-top: 20px;
 }
 
+.header__links{
+  padding-top: 10px;
+}
 
 .htwo{
     color: orange;
     float:left;
-    margin-right: 145vh;
+    margin-right: 130vh;
     margin-top:20px ;}
 
 
-    @media screen and (max-width: 100px) {
+    @media screen and (max-width: 600px) {
         .container{
             background:#0087bd;
             color: white;
             font-family: 'Poppins', sans-serif;
-            padding-bottom: 90px;
+            padding-bottom: 110px;
         }
         
         .header__links{
+            margin-top: -20px;
+            font-size: xx-small;
+            padding: -10px;
+          }
+
+          #md_icon{
             display: none;
           }
 
           .htwo{
             color:orange;
             float:left;
-            margin-right: 145vh;
             margin-top:20px;
             
         }
 
       }
 
-      @media screen and (max-width: 820px) {
+      @media screen and (max-width: 1000px) {
         .container{
             background:#0087bd;
             color: white;
             font-family: 'Poppins', sans-serif;
             padding-bottom: 10px;
         }
-        
+        .header__links{
+          padding-top: 10px;
+          font-size: xx-small;
+          padding: -10px;
+        }
 
           .htwo{
             color:orange;
             float:left;
-            margin-right: 30vh;
+            margin-right: 170px;
             margin-top:20px ;}
 
       }

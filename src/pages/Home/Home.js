@@ -5,6 +5,7 @@ import Items from './Items';
 import Footer from '../../components/Footer/Footer'
 import { BsSearch } from 'react-icons/bs';
 import SearchMovies from '../../components/Search/SearchMovies'
+import Trending from '../../components/Trending/Trending';
 const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=3fa71c2815cdb8a2118b76b8109667b5"
 
 
@@ -12,6 +13,7 @@ const Home = () => {
 
   const [items, setItems]= useState([]);
   const [query, setQuery] = useState("");
+
 
 
   useEffect(()=>{
@@ -22,28 +24,11 @@ const Home = () => {
     })
 
   },[])
-
- /* const searchMovies= async(e)=>{
-    e.preventDefault();
-    console.log("Searching...");
-    try{
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=3fa71c2815cdb8a2118b76b8109667b5&language=en-US&query=${query}`;
-      const res=await fetch(url);
-      const data=await res.json;
-      console.log(data);
-      setItems(data.results);
-    }catch(e){
-      console.log(e);
-    }
-  }
-
-  const changeHandler=(e)=>{
-    setQuery(e.target.value);
-  }
-*/
+  
   return (
     <div className="home__page">
-     <Header/>   
+     <Header/>  
+   
      <div className='movie_box'>
      <SearchMovies setItems={setItems}/>
      {items.length>0 ?(

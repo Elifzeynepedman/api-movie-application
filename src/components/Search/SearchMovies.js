@@ -3,7 +3,6 @@ import './search.css'
 import {BsSearch} from 'react-icons/bs'
 const SearchMovies = ({title,poster_path, original_language ,release_date, vote_average, overview,setItems}) => {
     const [query, setQuery] = useState("");
-    const [movies,setMovies]= useState([]);
     const searchMovies = async (e) => {
       e.preventDefault();
   
