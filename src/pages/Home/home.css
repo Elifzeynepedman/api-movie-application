@@ -1,7 +1,17 @@
 .home__page{
   background-color: #E8EBF5;
+  overflow: hidden;
 }
-
+.movie_box h2{
+  color: #0087bd;
+  text-align: center; 
+  margin: 69px;
+}
+.movie_box h5{
+  color: #0087bd;
+  text-align: center; 
+  overflow: hidden;
+}
 .cards{
   margin-top: 40px;
   margin-left: 10px;

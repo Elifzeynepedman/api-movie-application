@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './search.css'
 import {BsSearch} from 'react-icons/bs'
-const SearchMovies = ({title,poster_path, original_language ,release_date, vote_average, overview}) => {
+const SearchMovies = ({title,poster_path, original_language ,release_date, vote_average, overview,setItems}) => {
     const [query, setQuery] = useState("");
     const [movies,setMovies]= useState([]);
     const searchMovies = async (e) => {
@@ -13,7 +13,7 @@ const SearchMovies = ({title,poster_path, original_language ,release_date, vote_
           const res = await fetch(url);
           const data  = await res.json();
           console.log(data);
-          setMovies(data.results);
+          setItems(data.results);
       }catch(err){
           console.error(err);
       } 
@@ -27,22 +27,8 @@ const SearchMovies = ({title,poster_path, original_language ,release_date, vote_
          />
                 <BsSearch  className="search__input" style={{marginLeft:'-40px'}} onClick={searchMovies}/> 
         </div>
-        <div className='cards'>
-            {movies.filter(movie=> movie.poster_path).map(movie =>(
-          <div className="card" key={movie.id}>
-              <div className='card-inner'>
-                <div className='card-front'>
-  
-                    <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt={movie.title}/>
-                    <p>{movie.title}</p>
-                 </div>
-             </div>
-                
-  
-          </div>
-          
-        ))}
-          </div>
+        
+        
       </section>
   
       
