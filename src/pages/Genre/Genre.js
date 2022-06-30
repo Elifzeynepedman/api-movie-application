@@ -18,7 +18,7 @@ const Genre = () => {
   const items = [    
     { label: "Select Genre", value: "Select Genre", isDisabled:true },
 
-    { label: "Top Rated", value: "Top Rated" },
+    { label: "Actors", value: "Top Rated" },
     { label: "Now Playing", value: "Now Playing"},
     { label: "Upcoming", value: "Upcoming"},
     { label: "Tv Series", value: "Tv Series"}

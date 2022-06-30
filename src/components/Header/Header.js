@@ -9,8 +9,9 @@ function Header() {
         <h2 className='htwo'>AboutMovies</h2>
         <div className="header__links">
           <Link to='/'>Home</Link>
-          <Link to='/Genre'>Genre</Link>
           <Link to='/Trending'>Trending</Link>
+
+          <Link to='/Genre'>Other</Link>
 
           <MdMovieFilter size={80} id="md_icon"/>
       </div>

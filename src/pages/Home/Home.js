@@ -34,7 +34,9 @@ const Home = () => {
      {items.length>0 ?(
      <div className='container__home'>
      <div className="cards">
-      {items.map((movie)=><Items key={movie.id} {...movie}/> )}
+     {items.filter((movie)=>movie.poster_path!==null).map((movie)=>
+         <Items key={movie.id} {...movie}/>)
+     }
      </div>
      </div>
      ):(

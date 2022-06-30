@@ -27,7 +27,9 @@ const Trending = ({title,poster_path, original_language ,release_date, vote_aver
     </div>
     <div className='container__home'>
     <div className="cards">
-     {items.map((movie)=><Items key={movie.id} {...movie}/>)}
+     {items.filter((movie)=>movie.poster_path!==null).map((movie)=>
+         <Items key={movie.id} {...movie}/>)
+     }
     </div>
     </div>
     <Footer/>
