@@ -6,24 +6,27 @@ import Footer from '../../components/Footer/Footer'
 import { BsSearch } from 'react-icons/bs';
 import SearchMovies from '../../components/Search/SearchMovies'
 import Trending from '../../components/Trending/Trending';
-const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=3fa71c2815cdb8a2118b76b8109667b5"
+import CustomPagination from '../../components/Pagination/CustomPagination';
 
 
 const Home = () => {
 
   const [items, setItems]= useState([]);
   const [query, setQuery] = useState("");
+  const[page, setPage]= useState(1);
+
+  const url="https://api.themoviedb.org/3/movie/popular?api_key=3fa71c2815cdb8a2118b76b8109667b5&page=${page}"
 
 
 
   useEffect(()=>{
-    fetch(API_URL)
+    fetch(url)
     .then((res)=>res.json())
     .then(data=>{
       setItems(data.results)
     })
 
-  },[])
+  },[page])
   
   return (
     <div className="home__page">
@@ -46,6 +49,8 @@ const Home = () => {
     </div>
      )}
      </div>
+     <CustomPagination setPage={setPage}/>
+
      <Footer/>
 
     </div>

@@ -1,43 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Header from '../../components/Header/Header'
 import Select from "react-select";
-
+import Actors from './Actors/Actors';
 import './genre.css'
+import TvSeries from './TvSeries/TvSeries';
+import Upcoming from './Upcoming/Upcoming';
 const Genre = () => {
-  const colourStyles = {
-    control: (styles) => ({ ...styles, backgroundColor: "#bde1ff", }),
-    option: (styles, { isDisabled }) => {
-      return {
-        ...styles,
-        backgroundColor: isDisabled ? "white" : "white",
-        color: isDisabled ? "grey" : "black",
-        cursor: isDisabled ? "not-allowed" : "default"
-      };
-    }
+  const [value,setValue]=useState('');
+
+ 
+function Tab(e) {
+  
+  if (e.value === 'Now Playing') {
+    return (<Actors />);
+  }else if (e.value ==='Tv Series') {
+    return (<TvSeries />);
+  }else if (e.value ==='Upcoming') {
+    return (<Upcoming />);
+  }
+}
+
+
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
   };
-  const items = [    
-    { label: "Select Genre", value: "Select Genre", isDisabled:true },
 
-    { label: "Actors", value: "Top Rated" },
-    { label: "Now Playing", value: "Now Playing"},
-    { label: "Upcoming", value: "Upcoming"},
-    { label: "Tv Series", value: "Tv Series"}
 
-  ];
+  
   return (
     <div>
       <Header/>
-        <div className='dropdown'>
-          <Select defaultValue={items[0]}
-          label="Select Genre"
-          options={items}
-          styles={colourStyles}>
+      <select className="select_drop" value={value} onChange={handleChange}>
+        <option className="options" value="Select Category" disabled>Select Category</option>
+        <option className="options" value="Now Playing">Now Playing</option>
+        <option className="options" value="Tv Series">Tv Series</option>
+        <option className="options" value="Upcoming">Upcoming</option>
+      </select>
+      <Tab value={value} />
 
-
-          </Select>
-        </div>
     </div>
-  )
+  );
 }
+
+
 
 export default Genre

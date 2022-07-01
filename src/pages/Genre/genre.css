@@ -1,7 +1,27 @@
 .dropdown{
-    float: right;   
     width: 300px;
     margin-top: 10px;
     margin-right: 58px;
     text-align: center;
+}
+
+.select_drop{
+    color: black;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 300px;    
+    height: 40px;
+    border-radius: 5px;
+    background-color: #bde1ff;
+    text-align: center;
+    border: 1px solid transparent;
+    outline: none;
+    margin-left: 30px;
+
+
+}
+
+
+.tab_options{
+    margin-top: 50px;
 }

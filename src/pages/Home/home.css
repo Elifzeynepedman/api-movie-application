@@ -64,6 +64,7 @@
     height: 100%;
     padding: -70px;
     background: #7aadd3;
+    
 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -134,6 +135,9 @@
     cursor: pointer;
   }
 
+  .tv_series_container{
+    float: right;
+}
 
   @media screen and (max-width: 1000px) {
     .cards{
@@ -164,5 +168,9 @@
     .home__page{
       background-color: #E8EBF5;
       margin: 10px;
+    }
+   
+    .card {
+      height: 430px;
     }
   } 
