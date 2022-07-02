@@ -11,7 +11,6 @@ const SearchMovies = ({title,poster_path, original_language ,release_date, vote_
       try {
           const res = await fetch(url);
           const data  = await res.json();
-          console.log(data);
           setItems(data.results);
       }catch(err){
           console.error(err);

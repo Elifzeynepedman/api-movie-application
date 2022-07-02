@@ -21,7 +21,7 @@ const TvSeries = () => {
     <div className="tab_options" >
  <div className='container__home'>
     <div className="cards">
-     {items.filter((tv)=>tv.overview!==null).map((tv)=>
+     {items.filter((tv)=>tv.overview!=="").map((tv)=>
          <TvItems key={tv.id} {...tv}/>)
      }
     </div>

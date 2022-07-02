@@ -15,7 +15,6 @@ const Home = () => {
   const [items, setItems]= useState([]);
   const [query, setQuery] = useState("");
 
-  console.log(process.env);
 
 
   useEffect(()=>{
