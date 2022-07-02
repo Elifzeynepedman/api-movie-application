@@ -6,7 +6,8 @@ import Footer from '../../components/Footer/Footer'
 import { BsSearch } from 'react-icons/bs';
 import SearchMovies from '../../components/Search/SearchMovies'
 import Trending from '../../components/Trending/Trending';
-const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=3fa71c2815cdb8a2118b76b8109667b5"
+
+const API_URL=`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
   const [items, setItems]= useState([]);
   const [query, setQuery] = useState("");
 
+  console.log(process.env);
 
 
   useEffect(()=>{

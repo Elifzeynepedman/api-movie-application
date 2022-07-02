@@ -6,7 +6,7 @@ const Upcoming = () => {
     const [items, setItems]= useState([]);
     const[page, setPage]= useState(1);
 
-    const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=3fa71c2815cdb8a2118b76b8109667b5&page=${page}`;
+    const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`;
     
     useEffect(()=>{
         fetch(url)

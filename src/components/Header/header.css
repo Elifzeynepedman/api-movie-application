@@ -20,11 +20,31 @@
 .htwo{
     color: orange;
     float:left;
-    margin-right: 130vh;
+    margin-right: 120vh;
     margin-top:20px ;}
 
+.logo_size{
+  width: 100px;
+  height: 60px;
+}
+@media screen and (max-width: 550px) {
 
-    @media screen and (max-width: 600px) {
+  
+  .header__links{
+      margin-top: -20px;
+      font-size: xx-small;
+      padding: -100px;
+      margin-right: -10px;
+      
+    }
+
+    .logo_size{
+      display: none;
+    }
+
+
+}
+    @media screen and (max-width: 800px) {
         .container{
             background:#0087bd;
             color: white;
@@ -37,15 +57,17 @@
             font-size: xx-small;
             padding: -100px;
             margin-right: -10px;
+            
           }
 
-          #md_icon{
+          .logo_size{
             display: none;
           }
 
           .htwo{
             color:orange;
             float:left;
+            margin-right: -100px;
             margin-top:20px;
             
         }
